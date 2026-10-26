@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Minecraft x Shopee</title>
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/index.css">
+</head>
+<body>
+    <header class="mc-header">
+        <nav class="mc-nav">
+            <h1 class="mc-title">MINECRAFT x SHOPEE</h1>
+            <div class="mc-nav-group">
+                <a href="index.html" class="mc-btn active">Katalog Produk</a>
+                <a href="form.html" class="mc-btn">Pembuat Caption</a>
+            </div>
+        </nav>
+    </header>
+
+    <main class="mc-container">
+        <div class="mc-panel">
+            <h2 class="mc-section-title">📦 ITEM CATALOG</h2>
+            
+            <!-- Loading dan Error State -->
+            <div id="loading" class="mc-status">Generating World... Loading Products...</div>
+            <div id="error-message" class="mc-status mc-error hidden">⚠️ Failed to Load Items from Server!</div>
+
+            <!-- Grid Produk Ala Inventori Minecraft -->
+            <div id="product-list" class="mc-inventory-grid"></div>
+        </div>
+    </main>
+
+    <script src="js/index.js"></script>
+</body>
+</html>

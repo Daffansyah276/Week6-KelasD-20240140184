@@ -1,0 +1,189 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Press Start 2P', monospace; /* Font Pixel Art */
+}
+
+body {
+    /* Background motif Dirt/Stone Minecraft */
+    background-color: #1e1e1e;
+    background-image: 
+        radial-gradient(#3a3a3a 15%, transparent 16%),
+        radial-gradient(#2b2b2b 15%, transparent 16%);
+    background-size: 32px 32px;
+    background-position: 0 0, 16px 16px;
+    color: #fff;
+    padding-bottom: 50px;
+    image-rendering: pixelated;
+}
+
+/* Header & Navigasi */
+.mc-header {
+    background-color: #101010;
+    border-bottom: 4px solid #3c3c3c;
+    padding: 20px 10px;
+    margin-bottom: 30px;
+}
+
+.mc-nav {
+    max-width: 1000px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+}
+
+.mc-title {
+    color: #55ff55;
+    text-shadow: 3px 3px 0px #00aa00, 5px 5px 0px #000;
+    font-size: 1.5rem;
+    letter-spacing: 2px;
+}
+
+.mc-nav-group {
+    display: flex;
+    gap: 15px;
+}
+
+/* Tombol Khas Minecraft */
+.mc-btn {
+    display: inline-block;
+    padding: 12px 18px;
+    background-color: #707070;
+    border: 4px solid;
+    border-color: #a0a0a0 #303030 #303030 #a0a0a0; /* Efek 3D Timbul */
+    color: #e0e0e0;
+    text-decoration: none;
+    font-size: 0.75rem;
+    cursor: pointer;
+    text-shadow: 2px 2px 0px #000;
+}
+
+.mc-btn:hover {
+    background-color: #8b8b8b;
+    color: #ffff55;
+}
+
+.mc-btn:active, .mc-btn.active {
+    background-color: #555555;
+    border-color: #303030 #a0a0a0 #a0a0a0 #303030; /* Efek Tertekan */
+    color: #55ff55;
+}
+
+/* Container Utama */
+.mc-container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+/* Panel Inventori */
+.mc-panel {
+    background-color: #c6c6c6;
+    border: 4px solid;
+    border-color: #ffffff #555555 #555555 #ffffff;
+    padding: 20px;
+    box-shadow: inset -4px -4px 0px #373737, inset 4px 4px 0px #8b8b8b;
+    color: #222;
+}
+
+.mc-section-title {
+    font-size: 1rem;
+    color: #373737;
+    margin-bottom: 20px;
+    text-shadow: 1px 1px 0px #fff;
+}
+
+.mc-status {
+    font-size: 0.8rem;
+    text-align: center;
+    padding: 20px;
+    color: #373737;
+}
+
+.mc-error {
+    color: #aa0000;
+}
+
+.hidden {
+    display: none;
+}
+
+/* Grid Katalog Produk */
+.mc-inventory-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    gap: 15px;
+}
+
+/* Slot Item Kartu Produk */
+.mc-item-card {
+    background-color: #8b8b8b;
+    border: 4px solid;
+    border-color: #373737 #ffffff #ffffff #373737; /* Slot Cekung Ala Minecraft */
+    padding: 12px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: transform 0.1s;
+}
+
+.mc-item-card:hover {
+    transform: scale(1.02);
+    border-color: #ffff55 #55ffff #55ffff #ffff55;
+}
+
+.mc-item-img-wrapper {
+    background-color: #8b8b8b;
+    border: 2px solid #373737;
+    padding: 10px;
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 140px;
+}
+
+.mc-item-img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+    image-rendering: pixelated;
+}
+
+.mc-item-title {
+    font-size: 0.7rem;
+    color: #ffffff;
+    text-shadow: 2px 2px 0px #000;
+    margin-bottom: 8px;
+    line-height: 1.3;
+}
+
+.mc-item-category {
+    font-size: 0.55rem;
+    color: #55ffff;
+    text-shadow: 1px 1px 0px #000;
+    margin-bottom: 8px;
+}
+
+.mc-item-caption {
+    font-size: 0.55rem;
+    color: #e0e0e0;
+    text-shadow: 1px 1px 0px #000;
+    margin-bottom: 10px;
+    line-height: 1.4;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+.mc-item-price {
+    font-size: 0.8rem;
+    color: #ffff55; 
+    text-shadow: 2px 2px 0px #000;
+    margin-top: auto;
+}

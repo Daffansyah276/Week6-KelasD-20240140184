@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Minecraft x Shopee</title>
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/form.css">
+</head>
+<body>
+    <header class="mc-header">
+        <nav class="mc-nav">
+            <h1 class="mc-title">MINECRAFT x SHOPEE</h1>
+            <div class="mc-nav-group">
+                <a href="index.html" class="mc-btn">Katalog Produk</a>
+                <a href="form.html" class="mc-btn active">Pembuat Caption</a>
+            </div>
+        </nav>
+    </header>
+
+    <main class="mc-container">
+        <!-- Panel Form Input -->
+        <section class="mc-panel">
+            <h2 class="mc-section-title">FORM INPUT DATA PRODUK</h2>
+            <form id="caption-form" novalidate>
+                <div class="form-group">
+                    <label for="template">Pilih Format Template:</label>
+                    <select id="template" name="template" class="mc-input">
+                        <option value="1">Template 1: Promo Diskon Menarik</option>
+                        <option value="2">Template 2: Rekomendasi Kasual</option>
+                        <option value="3">Template 3: Singkat & Direct</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="nama">Nama Barang <span class="required"></span>:</label>
+                    <input type="text" id="nama" class="mc-input" placeholder="Essence Mascara Lash Princess">
+                    <small class="error-text" id="nama-error"></small>
+                </div>
+
+                <div class="form-group">
+                    <label for="harga">Harga Barang<span class="required"></span>:</label>
+                    <input type="text" id="harga" class="mc-input" placeholder="9.99">
+                    <small class="error-text" id="harga-error"></small>
+                </div>
+
+                <div class="form-group">
+                    <label for="kategori">Kategori Barang:</label>
+                    <input type="text" id="kategori" class="mc-input" placeholder="beauty">
+                </div>
+
+                <div class="form-group">
+                    <label for="catatan">Catatan / Promo Tambahan (Opsional):</label>
+                    <input type="text" id="catatan" class="mc-input mc-input-highlight" placeholder="Diskon 100%">
+                </div>
+
+                <div class="button-group">
+                    <button type="submit" class="mc-btn mc-btn-green">Buat Caption</button>
+                    <button type="button" id="btn-reset" class="mc-btn">Reset Form</button>
+                </div>
+            </form>
+        </section>
+
+        <!-- Panel Hasil Caption -->
+        <section class="mc-panel margin-top">
+            <h2 class="mc-section-title">HASIL CAPTION SIAP PAKAI</h2>
+            <div id="caption-preview" class="mc-preview-box">
+                Silakan isi form di atas dan klik tombol untuk menghasilkan caption.
+            </div>
+            <button type="button" id="btn-copy" class="mc-btn mc-btn-green margin-top-sm hidden">Salin Teks Caption</button>
+        </section>
+    </main>
+
+    <script src="js/form.js"></script>
+</body>
+</html>
